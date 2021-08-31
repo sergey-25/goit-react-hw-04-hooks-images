@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { GalleryItem, GalleryItemImage } from "./ImageGalleryItem.styled";
-import defaultImage from "../../images/defaultImage.jpg";
+
 
 export const ImageGalleryItem = ({ id, imageSrc, alt, onClick }) => {
   return (
@@ -10,9 +10,7 @@ export const ImageGalleryItem = ({ id, imageSrc, alt, onClick }) => {
   );
 };
 
-ImageGalleryItem.defaultProps = {
-  imageSrc: defaultImage,
-};
+
 
 ImageGalleryItem.propTypes = {
   id: PropTypes.number.isRequired,

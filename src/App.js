@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { fetchImages } from "services/pixabayApi";
+import { fetchImages } from "./services/pixabayApi";
 import toast, { Toaster } from "react-hot-toast";
-import { Spinner } from "components/Loader/Loader";
-import { Modal } from "components/Modal/Modal";
-import { Searchbar } from "components/Searchbar/Searchbar";
-import { ImageGallery } from "components/ImageGallery/ImageGallery";
-import { Button } from "components/Button/Button";
-import { Notification } from "components/Notification/Notification";
+import { Spinner } from "./components/Loader/Loader";
+import { Modal } from "./components/Modal/Modal";
+import { Searchbar } from "./components/Searchbar/Searchbar";
+import { ImageGallery } from "./components/ImageGallery/ImageGallery";
+import { Button } from "./components/Button/Button";
+import { Notification } from "./components/Notification/Notification";
 
 const Status = {
   IDLE: "idle",
@@ -15,7 +15,7 @@ const Status = {
   REJECTED: "rejected",
 };
 
-export function App() {
+export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
   const [images, setImages] = useState([]);

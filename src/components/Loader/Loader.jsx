@@ -5,7 +5,7 @@ export const Spinner = () => {
   return (
     <LoaderWrapper>
       <Loader
-        type="Oval"
+        type="Heart"
         color="#BA55D3"
         height={100}
         width={100}

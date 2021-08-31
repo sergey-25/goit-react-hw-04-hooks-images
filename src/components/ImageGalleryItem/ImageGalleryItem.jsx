@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { GalleryItem, GalleryItemImage } from "../ImageGalleryItem/ImageGalleryItem.styled";
+import { GalleryItem, GalleryItemImage } from "./ImageGalleryItem.styled";
+import defaultImage from "../../images/defaultImage.jpg";
 
-
-const ImageGalleryItem = ({ id, imageSrc, alt, onClick }) => {
+export const ImageGalleryItem = ({ id, imageSrc, alt, onClick }) => {
   return (
     <GalleryItem>
       <GalleryItemImage id={id} src={imageSrc} alt={alt} onClick={onClick} />
@@ -10,7 +10,9 @@ const ImageGalleryItem = ({ id, imageSrc, alt, onClick }) => {
   );
 };
 
-
+ImageGalleryItem.defaultProps = {
+  imageSrc: defaultImage,
+};
 
 ImageGalleryItem.propTypes = {
   id: PropTypes.number.isRequired,
@@ -18,4 +20,3 @@ ImageGalleryItem.propTypes = {
   alt: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
-export default ImageGalleryItem;

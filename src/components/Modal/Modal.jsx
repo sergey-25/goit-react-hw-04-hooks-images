@@ -14,7 +14,7 @@ export function Modal({ onClose, children }) {
 
   const handleKeyDown = (event) => {
     if (event.code === "Escape") {
-      this.props.onClose();
+      onClose();
     }
   };
 

@@ -29,7 +29,7 @@ export function Searchbar({ onSubmit, toast }) {
           value={inputValue}
           onChange={handleInputChange}
           autocomplete="off"
-          autofocus
+          autoFocus
           placeholder="Search images and photos"
         />
       </Form>
